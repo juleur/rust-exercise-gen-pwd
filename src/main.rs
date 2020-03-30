@@ -4,11 +4,6 @@ use rand::Rng;
 use std::io::stdin;
 use std::io::Write;
 
-const SPECIAL_CHARACTERS: &str = "~!@#$%^&*()-_+={}[]:;<>,.?";
-const DIGITS: &str = "0123456789";
-const LOWERCASE_CHARACTERS: &str = "abcdefghijklmnopqrstuvwxyz";
-const UPPERCASE_CHARACTERS: &str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
 fn main() {
     generate_password()
 }
@@ -59,6 +54,7 @@ fn input_pwd_length() -> u8 {
 }
 
 fn input_special_characters(cc: &mut String) {
+    const SPECIAL_CHARACTERS: &str = "~!@#$%^&*()-_+={}[]:;<>,.?";
     // Choose whether include symbols or not
     print!("Do you want to include symbols(y/n): ");
     std::io::stdout().flush().unwrap();
@@ -72,6 +68,7 @@ fn input_special_characters(cc: &mut String) {
 }
 
 fn input_digits(cc: &mut String) {
+    const DIGITS: &str = "0123456789";
     // Choose whether includes numbers or not
     print!("Do you want to include number(y/n): ");
     std::io::stdout().flush().unwrap();
@@ -85,6 +82,7 @@ fn input_digits(cc: &mut String) {
 }
 
 fn input_lowercase_characters(cc: &mut String) {
+    const LOWERCASE_CHARACTERS: &str = "abcdefghijklmnopqrstuvwxyz";
     // Choose whether lowercase characters or not
     print!("Do you want to include lowercase characters(y/n): ");
     std::io::stdout().flush().unwrap();
@@ -100,6 +98,7 @@ fn input_lowercase_characters(cc: &mut String) {
 }
 
 fn input_uppercase_characters(cc: &mut String) {
+    const UPPERCASE_CHARACTERS: &str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     // Choose whether uppercase characters or not
     print!("Do you want to include uppercase characters(y/n): ");
     std::io::stdout().flush().unwrap();
